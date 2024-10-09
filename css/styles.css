@@ -739,6 +739,32 @@ nav#filter a {
 a.current {
 	color: #5887FF !important; 
 }
+
+.portfolio-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+  }
+
+  .portfolio-item img {
+	width: 100%;
+	height: 100%; /* Set a uniform height */
+	object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+
+  @media (max-width: 768px) {
+	.portfolio-item {
+	  width: calc(50% - 20px); /* Two items per row on smaller screens */
+	}
+  }
+
+
+  @media (max-width: 576px) {
+	.portfolio-item {
+	  width: 100%; /* Stack items on top of each other on very small screens */
+	}
+  }
+
 .portfolio-items article img {
 	width: 100%;
 }
@@ -782,7 +808,7 @@ a.current {
 	display: block;
 }
 .portfolio-item .portfolio-desc a:hover {
-	/*text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);*/
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
 	text-decoration: none;
 }
 .portfolio-item .portfolio-desc .folio-info {
